@@ -17,4 +17,6 @@ RUN apt-get update && apt-get -yq dist-upgrade \
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
     locale-gen
 RUN pip3 install cutadapt
+COPY TruSeq_and_nextera_adapters.consolidated.fa /opt/.
 COPY Dockerfile /opt/.
+
